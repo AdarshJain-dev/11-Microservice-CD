@@ -13,7 +13,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: adservice
+    namespace: webapps
 
   syncPolicy:
     automated:
