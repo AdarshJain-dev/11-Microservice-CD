@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: adservice
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/AdarshJain-dev/11-Microservice-CD.git
+    targetRevision: main
+    path: adservice
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: adservice
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
