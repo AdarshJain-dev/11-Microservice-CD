@@ -15,7 +15,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: server
-        image: adarshjain428/shippingservice:latest
+        image: adarshjain428/shippingservice:4
         ports:
         - containerPort: 50051
         env:
